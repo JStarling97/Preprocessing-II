@@ -1,1 +1,64 @@
 // Navigation Styles here
+
+@fontf: 'Indie Flower', cursive;
+@fonts: 3.2rem;
+@pfont: 1.6rem;
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed lightgrey;
+    width: 100%;
+    @media @mobile {
+        flex-direction: column;
+    }
+
+    .navbar {
+        margin-top: 15px;
+        margin-right: 10%;
+
+        @media @mobile {
+            margin: 0 auto;
+            padding: 10px;
+        }
+    }
+
+    h1 {
+        margin-left: 10%;
+        font-family: @fontf;
+        font-size: @fonts;
+
+        @media @mobile {
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+    }
+    
+    a {
+        margin: 20px;
+        text-decoration: none;
+        color: black;
+        font-family: @pfont;
+        font-size: @pfont;
+    }
+
+    a:hover {
+        font-weight: bold;
+    }
+}
+
+.bus-img {
+    display: flex;
+    justify-content: center;
+
+    @media @mobile {
+        padding-bottom: 15px;
+    }
+
+    img {
+        width: 80%;
+
+    }
+    
+}
