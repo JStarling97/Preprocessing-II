@@ -1,4 +1,31 @@
+@navigation-border: lightgray;
+@fontf: 'Indie Flower', cursive;
+@fonts: 40px;
+@pfont: 1.6rem;
+
+.header {
+  margin-bottom: 10px;
+
+  .welc {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    border-bottom: 2px dashed @navigation-border;
+    h1 {
+      font-family: @fontf;
+      font-size: @fonts;
+    }
+
+    p {
+      font-size: @pfont;
+      line-height: 1.5;
+    }
+  }
+}
+
+
 .home {
+  line-height: 1.5;
 
   .content-section {
     margin: 30px 0;
@@ -6,18 +33,45 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      margin: 0 auto;
+      margin-left: 10%;
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 90%;
+      }
+      
+      h2 {
+        font-family: @fontf;
+        font-size: @fonts;
+      }
+
+      p {
+        font-size: @pfont;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
-      img {
+      @media @mobile {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .first {
+        border-radius: 10px;
+      }
+
+      .img-fluid {
         border-radius: 10px;
       }
     }
@@ -26,10 +80,18 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    width: 100%;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+      border-bottom: none;
+      width: 100%;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      width: 80%;
     }
 
     .img-content {
@@ -39,11 +101,27 @@
   }
 
   .content-destination {
-    width: 75%;
+    width: 100%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      border-top: 2px dashed @navigation-border;
+      width: 80%;
+    }
+
+    h2 {
+      font-family: @fontf;
+      font-size: @fonts;
+    }
+
+    p {
+      font-size: @pfont;
+
+    }
 
     img {
       border-radius: 10px;
+      width: 100%;
     }
   }
 
@@ -53,9 +131,19 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     .destination {
-      width: 30%;
+      width: 75%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+      }
     }
   }
 }// home

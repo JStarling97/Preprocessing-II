@@ -1,20 +1,23 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dashed black;
+  border-bottom: 2px dashed lightgray;
   width: 100%;
 }
 .navigation .navbar {
-  margin-top: 19.92px;
   margin-right: 10%;
+  margin-top: 15px;
 }
 .navigation h1 {
   margin-left: 10%;
+  font-family: 'Indie Flower', cursive;
+  font-size: 40px;
 }
 .navigation a {
   margin: 20px;
   text-decoration: none;
   color: black;
+  font-family: 30px;
 }
 .navigation a:hover {
   font-weight: bold;
